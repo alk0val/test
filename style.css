@@ -1,0 +1,91 @@
+/* Загальний контейнер */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 40px;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+/* Сітка вакансій */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/* Картка вакансії */
+.job-card {
+  border: 2px solid #000;
+  padding: 16px;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Назва вакансії */
+.job-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+/* Відділ */
+.job-department {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* Лінія під назвою */
+.job-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  margin-top: 4px;
+}
+
+/* Кнопка переходу */
+.job-button {
+  width: 40px;
+  height: 40px;
+  background-color: #FFD500;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  transition: background-color 0.2s;
+}
+
+.job-button:hover {
+  background-color: #FFC700;
+}
+
+.job-button::after {
+  content: "→";
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
